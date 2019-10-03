@@ -1,7 +1,6 @@
 #ifndef __CHARACTERISTICS_H_
 #define __CHARACTERISTICS_H_
 
-#include "DigitsSequence.h"
 #include "SequencesContainer.h"
 
 	class Characteristics {

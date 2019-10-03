@@ -151,7 +151,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BullsAndCows.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Answer.cpp" />
+    <ClCompile Include="src\Characteristics.cpp" />
+    <ClCompile Include="src\Factory.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\DigitsSequence.cpp" />
+    <ClCompile Include="src\Helper.cpp" />
+    <ClCompile Include="src\QuestionComputerRandom.cpp" />
+    <ClCompile Include="src\QuestionComputerSmart.cpp" />
+    <ClCompile Include="src\QuestionPlayer.cpp" />
+    <ClCompile Include="src\InputValidator.cpp" />
+    <ClCompile Include="src\ProposalComputer.cpp" />
+    <ClCompile Include="src\ProposalCustom.cpp" />
+    <ClCompile Include="src\ProposalPlayer.cpp" />
+    <ClCompile Include="src\Random.cpp" />
+    <ClCompile Include="src\RandomSequence.cpp" />
+    <ClCompile Include="src\SequencesContainer.cpp" />
+    <ClCompile Include="src\Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Characteristics.h" />
+    <ClInclude Include="src\Factory.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Helper.h" />
+    <ClInclude Include="src\QuestionComputerSmart.h" />
+    <ClInclude Include="src\Answer.h" />
+    <ClInclude Include="src\DigitsSequence.h" />
+    <ClInclude Include="src\QuestionComputerRandom.h" />
+    <ClInclude Include="src\QuestionInterface.h" />
+    <ClInclude Include="src\QuestionPlayer.h" />
+    <ClInclude Include="src\InputValidator.h" />
+    <ClInclude Include="src\ProposalComputer.h" />
+    <ClInclude Include="src\ProposalCustom.h" />
+    <ClInclude Include="src\ProposalInterface.h" />
+    <ClInclude Include="src\ProposalPlayer.h" />
+    <ClInclude Include="src\Random.h" />
+    <ClInclude Include="src\RandomSequence.h" />
+    <ClInclude Include="src\SequencesContainer.h" />
+    <ClInclude Include="src\Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

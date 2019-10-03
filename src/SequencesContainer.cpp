@@ -3,10 +3,7 @@
 #include <cassert>
 #include <iostream>
 
-#include "InputValidator.h"
-
 SequencesContainer::SequencesContainer() {
-
 }
 
 size_t SequencesContainer::size() const {
