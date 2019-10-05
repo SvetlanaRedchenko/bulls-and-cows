@@ -5,8 +5,7 @@
 #include "Characteristics.h"
 #include "Factory.h"
 #include "Game.h"
-#include "Helper.h"
-#include "InputValidator.h"
+#include "SequencesContainer.h" 
 
 namespace {
 	void test(const std::string& message,
@@ -58,17 +57,16 @@ void testPlayerVsPlayer() {
 }
 
 void testComputerFullHard() {
+	SequencesContainer allSequences = Characteristics::getAllSequences();
+	const size_t count = allSequences.size();
 	int max = 0;
-	int count = 0;
-	for (int i = 0; i < Characteristics::maxSequenceCount_; i++) {
-		if (isDigitsUnique(static_cast<int>(i))) {
-			int step = Game::play(
-				Factory::getTestProposal(i),
-				Factory::getComputerHardQuestion());
-			max = step > max ? step : max;
-			count++;
-			std::cout << i << " " << step << std::endl;
-		}
+	for (size_t i = 0; i < count; ++i) {
+		const DigitsSequence sequence = allSequences.extract(0);
+		int step = Game::play(
+			Factory::getTestProposal(sequence),
+			Factory::getComputerHardQuestion());
+		max = step > max ? step : max;
+		std::cout << sequence.toString() << " " << step << std::endl;
 	}
 	std::cout << "Test: " << count << " mathes, max step " << max << std::endl;
 }

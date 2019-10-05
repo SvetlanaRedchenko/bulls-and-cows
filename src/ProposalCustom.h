@@ -5,7 +5,7 @@
 
 class ProposalCustom : public ProposalInterface {
 public:
-	ProposalCustom(int);
+	ProposalCustom(const DigitsSequence&);
 
 	virtual void initialize() override;
 	virtual Answer check(const DigitsSequence&) override;

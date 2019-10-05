@@ -1,5 +1,6 @@
 #include "Factory.h"
 
+#include "DigitsSequence.h"
 #include "ProposalComputer.h"
 #include "ProposalCustom.h"
 #include "ProposalPlayer.h"
@@ -15,7 +16,7 @@ std::shared_ptr<ProposalInterface> Factory::getPlayerProposal() {
 	return std::shared_ptr<ProposalInterface>(new ProposalPlayer());
 }
 
-std::shared_ptr<ProposalInterface> Factory::getTestProposal(int sequence) {
+std::shared_ptr<ProposalInterface> Factory::getTestProposal(const DigitsSequence& sequence) {
 	return std::shared_ptr<ProposalInterface>(new ProposalCustom(sequence));
 }
 

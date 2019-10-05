@@ -1,6 +1,6 @@
 #include "ProposalCustom.h"
 
-ProposalCustom::ProposalCustom(int sequence)
+ProposalCustom::ProposalCustom(const DigitsSequence& sequence)
 	: ProposalInterface(), startSequence_(sequence) {
 }
 
