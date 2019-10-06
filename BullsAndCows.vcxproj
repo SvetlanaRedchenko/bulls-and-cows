@@ -101,11 +101,11 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <WarningLevel>Level4</WarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -156,8 +156,6 @@
     <ClCompile Include="src\Characteristics.cpp" />
     <ClCompile Include="src\Factory.cpp" />
     <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\DigitsSequence.cpp" />
-    <ClCompile Include="src\Helper.cpp" />
     <ClCompile Include="src\QuestionComputerRandom.cpp" />
     <ClCompile Include="src\QuestionComputerSmart.cpp" />
     <ClCompile Include="src\QuestionPlayer.cpp" />
@@ -167,6 +165,7 @@
     <ClCompile Include="src\ProposalPlayer.cpp" />
     <ClCompile Include="src\Random.cpp" />
     <ClCompile Include="src\RandomSequence.cpp" />
+    <ClCompile Include="src\Sequence.cpp" />
     <ClCompile Include="src\SequencesContainer.cpp" />
     <ClCompile Include="src\Test.cpp" />
   </ItemGroup>
@@ -174,10 +173,8 @@
     <ClInclude Include="src\Characteristics.h" />
     <ClInclude Include="src\Factory.h" />
     <ClInclude Include="src\Game.h" />
-    <ClInclude Include="src\Helper.h" />
     <ClInclude Include="src\QuestionComputerSmart.h" />
     <ClInclude Include="src\Answer.h" />
-    <ClInclude Include="src\DigitsSequence.h" />
     <ClInclude Include="src\QuestionComputerRandom.h" />
     <ClInclude Include="src\QuestionInterface.h" />
     <ClInclude Include="src\QuestionPlayer.h" />
@@ -188,7 +185,9 @@
     <ClInclude Include="src\ProposalPlayer.h" />
     <ClInclude Include="src\Random.h" />
     <ClInclude Include="src\RandomSequence.h" />
+    <ClInclude Include="src\Sequence.h" />
     <ClInclude Include="src\SequencesContainer.h" />
+    <ClInclude Include="src\Symbol.h" />
     <ClInclude Include="src\Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
