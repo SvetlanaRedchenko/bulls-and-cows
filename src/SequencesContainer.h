@@ -3,8 +3,8 @@
 
 #include <list>
 
-#include "Answer.h"
-#include "DigitsSequence.h"
+class Answer;
+class Sequence;
 
 class SequencesContainer {
 public:
@@ -12,12 +12,11 @@ public:
 
 	size_t size() const;
 	bool empty() const;
-	void push_back(const DigitsSequence&);
-	DigitsSequence extract(size_t);
-	void sieve(const DigitsSequence& sequence, const Answer& result);
-
+	void push_back(const Sequence&);
+	Sequence extract(size_t);
+	void sieve(const Sequence& sequence, const Answer& result);
 private:
-	std::list<DigitsSequence> container_;
+	std::list<Sequence> container_;
 };
 
 #endif

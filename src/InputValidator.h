@@ -3,9 +3,9 @@
 
 #include <string>
 
-#include "DigitsSequence.h"
+class Sequence;
 
-DigitsSequence getDigitsSequenceFromPlayer();
+Sequence getSequenceFromPlayer();
 int getCountBullsOrCowsFromPlayer(const std::string&);
 
 #endif

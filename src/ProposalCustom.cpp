@@ -1,12 +1,14 @@
 #include "ProposalCustom.h"
 
-ProposalCustom::ProposalCustom(const DigitsSequence& sequence)
+#include "Answer.h"
+
+ProposalCustom::ProposalCustom(const Sequence& sequence)
 	: ProposalInterface(), startSequence_(sequence) {
 }
 
 void ProposalCustom::initialize() {
 }
 
-Answer ProposalCustom::check(const DigitsSequence& guess) {
-	return checkDigitsSequence(startSequence_, guess);
+Answer ProposalCustom::check(const Sequence& guess) {
+	return checkSequence(startSequence_, guess);
 }

@@ -3,14 +3,14 @@
 
 #include <random>
 
-#include "DigitsSequence.h"
-#include "SequencesContainer.h"
+class Sequence;
+class SequencesContainer;
 
 class Random {
 public:
 	Random();
 
-	DigitsSequence get(SequencesContainer&, size_t min, size_t max) const;
+	Sequence get(SequencesContainer&, size_t min, size_t max) const;
 
 private:
 	mutable std::mt19937 generator_;

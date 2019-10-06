@@ -5,6 +5,7 @@
 #include "Characteristics.h"
 #include "Factory.h"
 #include "Game.h"
+#include "Sequence.h"
 #include "SequencesContainer.h" 
 
 namespace {
@@ -16,7 +17,6 @@ namespace {
 			proposal,
 			question);
 		std::cout << "Test: step = " << step << std::endl;
-
 	}
 };
 
@@ -61,7 +61,7 @@ void testComputerFullHard() {
 	const size_t count = allSequences.size();
 	int max = 0;
 	for (size_t i = 0; i < count; ++i) {
-		const DigitsSequence sequence = allSequences.extract(0);
+		const Sequence sequence = allSequences.extract(0);
 		int step = Game::play(
 			Factory::getTestProposal(sequence),
 			Factory::getComputerHardQuestion());

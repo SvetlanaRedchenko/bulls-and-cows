@@ -5,13 +5,13 @@
 
 class ProposalCustom : public ProposalInterface {
 public:
-	ProposalCustom(const DigitsSequence&);
+	ProposalCustom(const Sequence&);
 
 	virtual void initialize() override;
-	virtual Answer check(const DigitsSequence&) override;
+	virtual Answer check(const Sequence&) override;
 
 private:
-	DigitsSequence startSequence_;
+	Sequence startSequence_;
 };
 
 #endif

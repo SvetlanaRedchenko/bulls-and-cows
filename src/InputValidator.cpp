@@ -6,28 +6,40 @@
 #include <set>
 
 #include "Characteristics.h"
+#include "Sequence.h"
 
 namespace {
-	bool isStringContainsCorrectNumber(const std::string& str) {
-		std::set<char> digits;
+	bool isStringContainsCorrectSequence(const std::string& str) {
+		std::set<Symbol> symbols;
 		for (auto c : str) {
-			if (isdigit(c))
-				digits.insert(c);
+			if (Characteristics::isCorrectSymbol(c))
+				symbols.insert(c);
 			else return false;
 		}
-		return digits.size() == Characteristics::sequenceLength_;
+		return symbols.size() == Characteristics::sequenceLength_;
+	}
+
+	std::string toString(const std::vector<Symbol>& vec) {
+		std::string symbols("[");
+		for (auto c : vec) {
+			symbols += c;
+			symbols += ' ';
+		}
+		symbols += "]";
+		return symbols;
 	}
 }
 
-DigitsSequence getDigitsSequenceFromPlayer() {
+Sequence getSequenceFromPlayer() {
 	std::string input;
 	do {
-		std::cout << "Please, enter a four-digit number: ";
+		std::cout << "Please, enter " << Characteristics::sequenceLength_ << " unique symbols from "
+			<< toString(Characteristics::getSymbols()) << std::endl;
 		std::cin >> input;
 
-	} while (!isStringContainsCorrectNumber(input));
+	} while (!isStringContainsCorrectSequence(input));
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	return DigitsSequence(input);
+	return Sequence(input);
 }
 
 int getCountBullsOrCowsFromPlayer(const std::string& message) {
@@ -40,6 +52,6 @@ int getCountBullsOrCowsFromPlayer(const std::string& message) {
 			result = -1;
 		}
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	} while (!isCorrectSequenceLenght(result));
+	} while (!isCorrectBullsOrCowsValue(result));
 	return result;
 }

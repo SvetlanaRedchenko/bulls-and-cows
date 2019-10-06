@@ -2,12 +2,13 @@
 
 #include <iostream>
 
+#include "Answer.h"
 #include "InputValidator.h"
 
-DigitsSequence QuestionPlayer::nextAttempt() {
-	return getDigitsSequenceFromPlayer();
+Sequence QuestionPlayer::nextAttempt() {
+	return getSequenceFromPlayer();
 }
 
-void QuestionPlayer::setAnswer(const DigitsSequence& , const Answer& answer) {
+void QuestionPlayer::setAnswer(const Sequence& , const Answer& answer) {
 	std::cout << answer.toString() << std::endl;
 }

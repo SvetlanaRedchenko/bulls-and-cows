@@ -4,8 +4,8 @@
 #include "QuestionInterface.h"
 
 class QuestionPlayer : public QuestionInterface {
-	virtual DigitsSequence nextAttempt() override;
-	virtual void setAnswer(const DigitsSequence&, const Answer&) override;
+	virtual Sequence nextAttempt() override;
+	virtual void setAnswer(const Sequence&, const Answer&) override;
 };
 
 #endif

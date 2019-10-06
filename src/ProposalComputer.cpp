@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+#include "Answer.h"
 #include "RandomSequence.h"
 
 ProposalComputer::ProposalComputer()
@@ -14,6 +15,6 @@ void ProposalComputer::initialize() {
 	std::cout << "Computer set " << startSequence_.toString() << std::endl;
 }
 
-Answer ProposalComputer::check(const DigitsSequence& guess) {
-	return checkDigitsSequence(startSequence_, guess);
+Answer ProposalComputer::check(const Sequence& guess) {
+	return checkSequence(startSequence_, guess);
 }

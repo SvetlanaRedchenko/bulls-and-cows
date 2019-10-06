@@ -1,23 +1,27 @@
 #ifndef __CHARACTERISTICS_H_
 #define __CHARACTERISTICS_H_
 
-#include "SequencesContainer.h"
+#include <vector>
 
-	class Characteristics {
-	public:
-		// сколько цифр в последовательности
-		static const int sequenceLength_ = 4;
-		// сколько цифр принимает участие в загадывании
-		static const int symbolsCount_ = 10;
-		// максимальное количество всех возможных последовательностей без учетов повторов
-		static const int maxSequenceCount_;
+#include "Symbol.h"
 
-		static SequencesContainer getAllSequences();
+class Sequence;
+class SequencesContainer;
 
-	private:
-		static SequencesContainer allSequences_;
-	};
+class Characteristics {
+public:
+	static const size_t sequenceLength_ = 4;
 
-	bool isCorrectSequenceLenght(int);
+	static std::vector<Symbol> getSymbols();
+	static SequencesContainer getAllSequences();
+
+	static bool isCorrectSymbol(Symbol);
+
+private:
+	static std::vector<Symbol> symbols_;
+	static SequencesContainer allSequences_;
+};
+
+bool isCorrectBullsOrCowsValue(int);
 
 #endif

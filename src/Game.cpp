@@ -2,6 +2,7 @@
 
 #include <cassert>
 
+#include "Answer.h"
 #include "Characteristics.h"
 #include "ProposalInterface.h"
 #include "QuestionInterface.h"
@@ -16,7 +17,7 @@ int Game::play(
 	proposal->initialize();
 	Answer answer;
 	do {
-		DigitsSequence sequence = question->nextAttempt();
+		const Sequence sequence = question->nextAttempt();
 		answer = proposal->check(sequence);
 		question->setAnswer(sequence, answer);
 		++step;

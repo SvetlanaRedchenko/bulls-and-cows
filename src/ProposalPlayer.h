@@ -8,10 +8,7 @@ public:
 	ProposalPlayer();
 
 	virtual void initialize() override;
-	virtual Answer check(const DigitsSequence&) override;
-
-private:
-	DigitsSequence startSequence_;
+	virtual Answer check(const Sequence&) override;
 };
 
 #endif

@@ -2,16 +2,18 @@
 
 #include <iostream>
 
+#include "Answer.h"
+
 QuestionComputerRandom::QuestionComputerRandom()
 	: QuestionInterface(),
 	  generator_() {
 }
 
-DigitsSequence QuestionComputerRandom::nextAttempt() {
-	const DigitsSequence attempt = generator_.getNextSequence();
+Sequence QuestionComputerRandom::nextAttempt() {
+	const Sequence attempt = generator_.getNextSequence();
 	//std::cout << attempt.toString() << "?" << std::endl;
 	return attempt;
 }
 
-void QuestionComputerRandom::setAnswer(const DigitsSequence&, const Answer&) {
+void QuestionComputerRandom::setAnswer(const Sequence&, const Answer&) {
 }
