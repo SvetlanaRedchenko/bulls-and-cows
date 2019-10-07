@@ -12,7 +12,7 @@ namespace {
 		for (int j = static_cast<int>(permutation.size()) - 1; j >= 0; --j) {
 			if (permutation[j] < n - j - 1) {
 				permutation[j]++;
-				for (int i = j + 1; i < permutation.size(); ++i) {
+				for (size_t i = j + 1; i < permutation.size(); ++i) {
 					permutation[i] = 0;
 				}
 				return true;

@@ -30,7 +30,7 @@ Answer checkSequence(
 	const Sequence& origin, const Sequence& attempt) {
 	assert(origin.symbols_.size() == attempt.symbols_.size());
 	Answer answer;
-	for (int i = 0; i < origin.symbols_.size(); ++i) {
+	for (size_t i = 0; i < origin.symbols_.size(); ++i) {
 		if (origin.symbols_[i] == attempt.symbols_[i]) {
 			answer.addBull();
 		}
