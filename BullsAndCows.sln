@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BullsAndCows", "BullsAndCows\BullsAndCows.vcxproj", "{B0C430AA-EDBD-42E5-8050-FAFBABCD4DDE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BullsAndCowsUnitTests", "BullsAndCowsUnitTests\BullsAndCowsUnitTests.vcxproj", "{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{B0C430AA-EDBD-42E5-8050-FAFBABCD4DDE}.Release|x64.Build.0 = Release|x64
 		{B0C430AA-EDBD-42E5-8050-FAFBABCD4DDE}.Release|x86.ActiveCfg = Release|Win32
 		{B0C430AA-EDBD-42E5-8050-FAFBABCD4DDE}.Release|x86.Build.0 = Release|Win32
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Debug|x64.ActiveCfg = Debug|x64
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Debug|x64.Build.0 = Debug|x64
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Debug|x86.ActiveCfg = Debug|Win32
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Debug|x86.Build.0 = Debug|Win32
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Release|x64.ActiveCfg = Release|x64
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Release|x64.Build.0 = Release|x64
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Release|x86.ActiveCfg = Release|Win32
+		{0F68ED8D-49C3-450E-AEBC-3D313A02A05E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
