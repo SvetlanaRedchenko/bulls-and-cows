@@ -12,9 +12,7 @@ QuestionComputerSmart::QuestionComputerSmart()
 }
 
 Sequence QuestionComputerSmart::nextAttempt() {
-	const Sequence attempt = generator_.get(sequencesForChoose_, 0, sequencesForChoose_.size());
-	std::cout << attempt.toString() << "?" << std::endl;
-	return attempt;
+	return generator_.get(sequencesForChoose_, 0, sequencesForChoose_.size());
 }
 
 void QuestionComputerSmart::setAnswer(const Sequence& sequence, const Answer& result) {

@@ -10,9 +10,7 @@ QuestionComputerRandom::QuestionComputerRandom()
 }
 
 Sequence QuestionComputerRandom::nextAttempt() {
-	const Sequence attempt = generator_.getNextSequence();
-	//std::cout << attempt.toString() << "?" << std::endl;
-	return attempt;
+	return generator_.getNextSequence();
 }
 
 void QuestionComputerRandom::setAnswer(const Sequence&, const Answer&) {
