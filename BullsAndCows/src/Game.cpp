@@ -1,6 +1,7 @@
 #include "Game.h"
 
 #include <cassert>
+#include <iostream>
 
 #include "Answer.h"
 #include "Characteristics.h"
@@ -18,7 +19,9 @@ int Game::play(
 	Answer answer;
 	do {
 		const Sequence sequence = question->nextAttempt();
+		std::cout << sequence.toString() << "?" << std::endl;
 		answer = proposal->check(sequence);
+		std::cout << "For " << sequence.toString() << " : " << answer.toString() << std::endl;
 		question->setAnswer(sequence, answer);
 		++step;
 	} while (!answer.isWin());

@@ -6,6 +6,6 @@
 class Sequence;
 
 Sequence getSequenceFromPlayer();
-int getCountBullsOrCowsFromPlayer(const std::string&);
+int getNumberFromPlayer(const std::string&, int, int);
 
 #endif

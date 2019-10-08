@@ -1,6 +1,7 @@
 #ifndef __CHARACTERISTICS_H_
 #define __CHARACTERISTICS_H_
 
+#include <string>
 #include <vector>
 
 #include "Symbol.h"
@@ -23,5 +24,6 @@ private:
 };
 
 bool isCorrectBullsOrCowsValue(int);
+std::string getSymbolsAsString();
 
 #endif

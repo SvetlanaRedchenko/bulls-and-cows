@@ -1,9 +1,5 @@
 #include "QuestionComputerRandom.h"
 
-#include <iostream>
-
-#include "Answer.h"
-
 QuestionComputerRandom::QuestionComputerRandom()
 	: QuestionInterface(),
 	  generator_() {

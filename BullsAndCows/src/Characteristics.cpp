@@ -79,3 +79,13 @@ std::vector<Symbol> Characteristics::getSymbols() {
 bool isCorrectBullsOrCowsValue(int value) {
 	return value >= 0 && value <= Characteristics::sequenceLength_;
 }
+
+std::string getSymbolsAsString() {
+	std::string symbols("[");
+	for (auto c : Characteristics::getSymbols()) {
+		symbols += c;
+		symbols += ' ';
+	}
+	symbols += "]";
+	return symbols;
+}

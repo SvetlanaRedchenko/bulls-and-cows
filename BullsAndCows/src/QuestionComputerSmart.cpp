@@ -1,8 +1,5 @@
 #include "QuestionComputerSmart.h"
 
-#include <cassert>
-#include <iostream>
-
 #include "Answer.h"
 #include "Characteristics.h"
 

@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Answer.h"
+#include "Characteristics.h"
 #include "InputValidator.h"
 
 ProposalPlayer::ProposalPlayer()
@@ -16,9 +17,10 @@ void ProposalPlayer::initialize() {
 	std::getline(std::cin, temp);
 }
 
-Answer ProposalPlayer::check(const Sequence& sequence) {
-	std::cout << "You make [" << sequence.toString() << "]?" << std::endl;
-	const int bulls = getCountBullsOrCowsFromPlayer("Please, enter bulls count: ");
-	const int cows = getCountBullsOrCowsFromPlayer("Please, enter cows count: ");
+Answer ProposalPlayer::check(const Sequence&) {
+	const int bulls = getNumberFromPlayer("Please, enter bulls count: ",
+		0, Characteristics::sequenceLength_);
+	const int cows = getNumberFromPlayer("Please, enter cows count: ",
+		0, Characteristics::sequenceLength_ - bulls);
 	return Answer(bulls, cows);
 }

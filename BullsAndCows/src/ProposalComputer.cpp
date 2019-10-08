@@ -1,7 +1,5 @@
 #include "ProposalComputer.h"
 
-#include <iostream>
-
 #include "Answer.h"
 #include "RandomSequence.h"
 
@@ -12,9 +10,8 @@ ProposalComputer::ProposalComputer()
 void ProposalComputer::initialize() {
 	RandomSequence generator;
 	startSequence_ = generator.getNextSequence();
-	std::cout << "Computer set " << startSequence_.toString() << std::endl;
 }
 
-Answer ProposalComputer::check(const Sequence& guess) {
-	return checkSequence(startSequence_, guess);
+Answer ProposalComputer::check(const Sequence& question) {
+	return checkSequence(startSequence_, question);
 }

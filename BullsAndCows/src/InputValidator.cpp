@@ -18,23 +18,12 @@ namespace {
 		}
 		return symbols.size() == Characteristics::sequenceLength_;
 	}
-
-	std::string toString(const std::vector<Symbol>& vec) {
-		std::string symbols("[");
-		for (auto c : vec) {
-			symbols += c;
-			symbols += ' ';
-		}
-		symbols += "]";
-		return symbols;
-	}
 }
 
 Sequence getSequenceFromPlayer() {
 	std::string input;
 	do {
-		std::cout << "Please, enter " << Characteristics::sequenceLength_ << " unique symbols from "
-			<< toString(Characteristics::getSymbols()) << std::endl;
+		std::cout << "Please, enter You sequence" << std::endl;
 		std::cin >> input;
 
 	} while (!isStringContainsCorrectSequence(input));
@@ -42,16 +31,17 @@ Sequence getSequenceFromPlayer() {
 	return Sequence(input);
 }
 
-int getCountBullsOrCowsFromPlayer(const std::string& message) {
+int getNumberFromPlayer(const std::string& message, int min, int max) {
+	assert(min <= max);
 	int result = -1;
 	do {
-		std::cout << message;
+		std::cout << message << std::endl;
 		std::cin >> result;
 		if (std::cin.fail()) {
 			std::cin.clear();
 			result = -1;
 		}
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	} while (!isCorrectBullsOrCowsValue(result));
+	} while (result < min || result > max);
 	return result;
 }
