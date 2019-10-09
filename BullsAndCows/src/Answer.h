@@ -1,23 +1,27 @@
 #ifndef __ANSWER_H_
 #define __ANSWER_H_
 
-#include <string>
-
 class Answer {
 public:
-	Answer();
-	Answer(int bulls, int cows);
+	explicit Answer(size_t);
+
+	void set(size_t, size_t);
+	void incBull();
+	void incCow();
 
 	bool isWin() const;
-	void addBull();
-	void addCow();
+
+	size_t getBulls() const;
+	size_t getCows() const;
+	size_t getLimit() const;
+
 	bool operator==(const Answer&) const;
 	bool operator!=(const Answer&) const;
 
-	std::string toString() const;
 private:
-	int bulls_;
-	int cows_;
+	size_t limit_;
+	size_t bulls_;
+	size_t cows_;
 };
 
 #endif

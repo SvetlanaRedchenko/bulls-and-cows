@@ -22,5 +22,7 @@ Answer ProposalPlayer::check(const Sequence&) {
 		0, Characteristics::sequenceLength_);
 	const int cows = getNumberFromPlayer("Please, enter cows count: ",
 		0, Characteristics::sequenceLength_ - bulls);
-	return Answer(bulls, cows);
+	Answer answer(Characteristics::sequenceLength_);
+	answer.set(bulls, cows);
+	return answer;
 }

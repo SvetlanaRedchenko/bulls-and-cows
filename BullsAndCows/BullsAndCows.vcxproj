@@ -163,6 +163,7 @@
     <ClCompile Include="src\Characteristics.cpp" />
     <ClCompile Include="src\Factory.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Helper.cpp" />
     <ClCompile Include="src\QuestionComputerRandom.cpp" />
     <ClCompile Include="src\QuestionComputerSmart.cpp" />
     <ClCompile Include="src\QuestionPlayer.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="src\Characteristics.h" />
     <ClInclude Include="src\Factory.h" />
     <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Helper.h" />
     <ClInclude Include="src\QuestionComputerSmart.h" />
     <ClInclude Include="src\Answer.h" />
     <ClInclude Include="src\QuestionComputerRandom.h" />

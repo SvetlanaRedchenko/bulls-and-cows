@@ -29,13 +29,13 @@ std::string Sequence::toString() const {
 Answer checkSequence(
 	const Sequence& origin, const Sequence& attempt) {
 	assert(origin.symbols_.size() == attempt.symbols_.size());
-	Answer answer;
+	Answer answer(Characteristics::sequenceLength_);
 	for (size_t i = 0; i < origin.symbols_.size(); ++i) {
 		if (origin.symbols_[i] == attempt.symbols_[i]) {
-			answer.addBull();
+			answer.incBull();
 		}
 		else if (std::find(origin.symbols_.begin(), origin.symbols_.end(), attempt.symbols_[i]) != origin.symbols_.end()) {
-			answer.addCow();
+			answer.incCow();
 		}
 	}
 

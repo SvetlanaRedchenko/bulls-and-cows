@@ -5,6 +5,7 @@
 
 #include "Answer.h"
 #include "Characteristics.h"
+#include "Helper.h"
 #include "ProposalInterface.h"
 #include "QuestionInterface.h"
 
@@ -16,12 +17,12 @@ int Game::play(
 
 	int step = 0;
 	proposal->initialize();
-	Answer answer;
+	Answer answer(Characteristics::sequenceLength_);
 	do {
 		const Sequence sequence = question->nextAttempt();
 		std::cout << sequence.toString() << "?" << std::endl;
 		answer = proposal->check(sequence);
-		std::cout << "For " << sequence.toString() << " : " << answer.toString() << std::endl;
+		std::cout << "For " << sequence.toString() << " : " << toString(answer) << std::endl;
 		question->setAnswer(sequence, answer);
 		++step;
 	} while (!answer.isWin());

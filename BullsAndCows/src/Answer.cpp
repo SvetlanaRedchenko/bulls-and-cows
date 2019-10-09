@@ -1,42 +1,44 @@
 #include "Answer.h"
 
-#include <cassert>
-#include <sstream>
-
-#include "Characteristics.h"
-
-Answer::Answer() : Answer(0, 0) {
+Answer::Answer(size_t limit)
+	: limit_(limit),
+      bulls_(0),
+      cows_(0) {
 }
 
-Answer::Answer(int bulls, int cows) 
-    : bulls_(bulls), cows_(cows) {
-	assert(bulls_ + cows_ <= Characteristics::sequenceLength_);
+void Answer::set(size_t bulls, size_t cows) {
+	bulls_ = bulls;
+	cows_ = cows;
+}
+
+void Answer::incBull() {
+	bulls_++;
+}
+
+void Answer::incCow() {
+	cows_++;
+}
+
+size_t Answer::getBulls() const {
+	return bulls_;
+}
+
+size_t Answer::getCows() const {
+	return cows_;
+}
+
+size_t Answer::getLimit() const {
+	return limit_;
 }
 
 bool Answer::isWin() const {
-	return bulls_ == Characteristics::sequenceLength_;
-}
-
-void Answer::addBull() {
-	bulls_++;
-	assert(bulls_ + cows_ <= Characteristics::sequenceLength_);
-}
-
-void Answer::addCow() {
-	cows_++;
-	assert(bulls_ + cows_ <= Characteristics::sequenceLength_);
+	return bulls_ == limit_;
 }
 
 bool Answer::operator==(const Answer& answer) const {
-	return bulls_ == answer.bulls_ && cows_ == answer.cows_;
+	return limit_ == answer.limit_ && bulls_ == answer.bulls_ && cows_ == answer.cows_;
 }
 
 bool Answer::operator!=(const Answer& answer) const {
 	return !(this->operator==(answer));
-}
-
-std::string Answer::toString() const {
-	std::ostringstream oss;
-	oss << "bulls = " << bulls_ << ", cows = " << cows_;
-	return oss.str();
 }
