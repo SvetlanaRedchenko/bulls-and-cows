@@ -39,3 +39,7 @@ void SequencesContainer::sieve(const Sequence& sequence, const Answer& answer) {
 		}
 	}
 }
+
+const std::list<Sequence>& SequencesContainer::getForTest() const {
+	return container_;
+}

@@ -2,15 +2,16 @@
 #include <memory>
 
 #include "src/Characteristics.h"
-#include "src/InputValidator.h"
 #include "src/Factory.h"
 #include "src/Game.h"
+#include "src/Helper.h"
+#include "src/InputValidator.h"
 
 int main()
 {
 	std::cout << "Game Bulls and Cows (extended, non-classic version)\n"
 		"Player 1 makes up a sequence of " << Characteristics::sequenceLength_ <<
-		" unique characters from the set " << getSymbolsAsString() << std::endl <<
+		" unique characters from the set " << toString(Characteristics::getSymbols()) << std::endl <<
 		"Player 2 tries to guess her by offering his own version.\n"
 		"If the symbol is present in the desired sequence in its place, this is the Bull.\n"
 		"If the symbol is not present in the correct sequence in the desired sequence, this is the Cow.\n"

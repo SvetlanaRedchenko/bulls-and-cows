@@ -175,6 +175,7 @@
     <ClCompile Include="src\RandomSequence.cpp" />
     <ClCompile Include="src\Sequence.cpp" />
     <ClCompile Include="src\SequencesContainer.cpp" />
+    <ClCompile Include="src\SequencesGenerator.cpp" />
     <ClCompile Include="src\Test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +197,7 @@
     <ClInclude Include="src\RandomSequence.h" />
     <ClInclude Include="src\Sequence.h" />
     <ClInclude Include="src\SequencesContainer.h" />
+    <ClInclude Include="src\SequencesGenerator.h" />
     <ClInclude Include="src\Symbol.h" />
     <ClInclude Include="src\Test.h" />
   </ItemGroup>

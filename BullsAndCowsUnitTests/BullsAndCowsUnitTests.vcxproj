@@ -41,6 +41,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SequencesGeneratorTest.cpp" />
+    <ClCompile Include="SequenceTest.cpp" />
+    <ClCompile Include="TestGamePlay.cpp" />
     <ClCompile Include="test\AnswerTest.cpp" />
   </ItemGroup>
   <ItemDefinitionGroup />

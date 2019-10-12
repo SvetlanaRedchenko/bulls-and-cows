@@ -13,10 +13,13 @@ public:
 	Sequence();
 	Sequence(const std::string&);
 
-	std::string toString() const;
+	bool operator==(const Sequence&) const;
+	bool operator<(const Sequence&) const;
 
 	friend Answer checkSequence(
 		const Sequence&, const Sequence&);
+	friend bool isUnique(Sequence);
+	friend std::string toString(const Sequence&);
 
 private:
 	std::vector<Symbol> symbols_;

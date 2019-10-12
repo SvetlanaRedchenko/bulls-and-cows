@@ -3,8 +3,9 @@
 
 #include <list>
 
+#include "Sequence.h"
+
 class Answer;
-class Sequence;
 
 class SequencesContainer {
 public:
@@ -15,6 +16,8 @@ public:
 	void push_back(const Sequence&);
 	Sequence extract(size_t);
 	void sieve(const Sequence& sequence, const Answer& result);
+
+	const std::list<Sequence>& getForTest() const;
 private:
 	std::list<Sequence> container_;
 };

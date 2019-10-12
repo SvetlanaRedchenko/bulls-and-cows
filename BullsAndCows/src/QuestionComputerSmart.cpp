@@ -2,10 +2,13 @@
 
 #include "Answer.h"
 #include "Characteristics.h"
+#include "SequencesGenerator.h"
 
 QuestionComputerSmart::QuestionComputerSmart()
 	: QuestionInterface(), generator_() {
-	sequencesForChoose_ = Characteristics::getAllSequences();
+	SequencesGenerator generator;
+	generator.set(Characteristics::sequenceLength_, Characteristics::getSymbols());
+	sequencesForChoose_ = generator.get();
 }
 
 Sequence QuestionComputerSmart::nextAttempt() {

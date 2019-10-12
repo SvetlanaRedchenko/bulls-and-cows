@@ -6,13 +6,14 @@
 #include <set>
 
 #include "Characteristics.h"
+#include "Helper.h"
 #include "Sequence.h"
 
 namespace {
 	bool isStringContainsCorrectSequence(const std::string& str) {
 		std::set<Symbol> symbols;
 		for (auto c : str) {
-			if (Characteristics::isCorrectSymbol(c))
+			if (isCorrectSymbol(c, Characteristics::getSymbols()))
 				symbols.insert(c);
 			else return false;
 		}

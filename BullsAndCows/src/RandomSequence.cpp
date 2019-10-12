@@ -1,14 +1,16 @@
 #include "RandomSequence.h"
 
-#include <cassert>
 #include <iostream>
 
 #include "Characteristics.h"
 #include "Sequence.h"
+#include "SequencesGenerator.h"
 
 RandomSequence::RandomSequence()
 	: generator_() {
-	sequencesForChoose_ = Characteristics::getAllSequences();
+	SequencesGenerator generator;
+	generator.set(Characteristics::sequenceLength_, Characteristics::getSymbols());
+	sequencesForChoose_ = generator.get();
 }
 
 Sequence RandomSequence::getNextSequence() {
